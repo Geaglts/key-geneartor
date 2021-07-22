@@ -2,4 +2,4 @@
 
 ## Page
 
-[Check the page](https://geaglts.github.io/key-geneartor/){:target="\_blank"}
+<a href="https://geaglts.github.io/key-geneartor/" target="_blank">Check the page</a>
