@@ -18,13 +18,13 @@ function genKey(size) {
 
 genKeyBtn.onclick = () => {
   const keySizeInput = document.getElementById("key-size");
-  const generatedKeyText = document.getElementById("generated-key");
+  const generatedKeyInput = document.getElementById("generated-key");
 
   const size = Number(keySizeInput.value) || 32;
   keySizeInput.value = size;
 
   const generatedKey = genKey(size);
-  generatedKeyText.value = generatedKey;
+  generatedKeyInput.value = generatedKey;
 };
 
 copyKeyBtn.onclick = () => {
@@ -34,6 +34,8 @@ copyKeyBtn.onclick = () => {
 };
 
 clearKeyBtn.onclick = () => {
-  const generatedKey = document.getElementById("generated-key");
-  generatedKey.innerText = "";
+  const keySizeInput = document.getElementById("key-size");
+  const generatedKeyInput = document.getElementById("generated-key");
+  keySizeInput.value = "";
+  generatedKeyInput.value = "";
 };
