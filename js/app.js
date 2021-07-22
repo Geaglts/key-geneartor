@@ -6,7 +6,7 @@ function genKey(size) {
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "123456789";
-  const symbols = "!@#$%^&*()+_=-<>/.;:~ñ[]?,{}";
+  const symbols = "!@#$%^&*()+_=-<>.;:~ñ[]?,{}";
   const concat = `${lowercase}${uppercase}${numbers}${symbols}`;
   let key = "";
   for (let i = 0; i < size; i++) {
