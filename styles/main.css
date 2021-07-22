@@ -6,6 +6,12 @@
   outline: none;
 }
 
+.flex, .keygen__buttons div, .keygen, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   padding: 0.4em 0.8em;
   border: none;
@@ -21,9 +27,6 @@ button:hover {
 header {
   color: white;
   height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 header h1 {
   text-transform: uppercase;
@@ -51,10 +54,7 @@ header h1 {
 }
 
 .keygen {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .keygen__result {
   text-align: center;
@@ -85,10 +85,34 @@ header h1 {
   background-color: #04bf1b;
   font-size: 16pt;
 }
-.keygen__buttons #copy-key-btn {
+.keygen__buttons div {
+  flex-direction: column;
+  position: relative;
+}
+.keygen__buttons div #copy-key-btn {
   color: white;
   background-color: royalblue;
   font-size: 16pt;
+}
+.keygen__buttons div .copied__container {
+  position: absolute;
+  bottom: -50px;
+}
+.keygen__buttons div .copied__container .triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid royalblue;
+}
+.keygen__buttons div .copied__container .text {
+  background-color: royalblue;
+  color: white;
+  font-weight: 300;
+  font-size: 14pt;
+  padding: 0.4em;
+  border-radius: 0.2em;
 }
 .keygen__buttons #clear-key-btn {
   color: white;
