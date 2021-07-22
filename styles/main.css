@@ -68,6 +68,9 @@ header h1 {
   border: none;
   padding: 1em;
   text-align: center;
+  cursor: not-allowed;
+  color: transparent;
+  text-shadow: 0 0 0 #222;
 }
 .keygen__result input::selection {
   background-color: transparent;
