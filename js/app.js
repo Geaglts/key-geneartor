@@ -31,10 +31,19 @@ genKeyBtn.onclick = () => {
 	key = generatedKey;
 };
 
+const showCopiedView = () => {
+	const copiedView = document.getElementById("copied-container");
+	copiedView.style.display = "flex";
+	setTimeout(() => {
+		copiedView.style.display = "none";
+	}, 1000);
+};
+
 copyKeyBtn.onclick = () => {
 	const generatedKeyText = document.getElementById("generated-key");
 	generatedKeyText.select();
 	document.execCommand("copy");
+	showCopiedView();
 };
 
 clearKeyBtn.onclick = () => {
