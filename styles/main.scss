@@ -1,0 +1,147 @@
+$primary-color: royalblue;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  outline: none;
+}
+
+@mixin hover-animation($scale: 1.1) {
+  transition: all 0.35s;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin custom-button($bgColor, $color, $fSize) {
+  color: $color;
+  background-color: $bgColor;
+  font-size: $fSize;
+}
+
+button {
+  padding: 0.4em 0.8em;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: 700;
+  cursor: pointer;
+
+  @include hover-animation();
+}
+
+header {
+  color: white;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38pt;
+    color: $primary-color;
+  }
+}
+
+// Global
+.input__group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 22pt;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  input {
+    font-size: 16pt;
+    font-weight: 300;
+    width: 500px;
+    border: none;
+    padding: 0.5em;
+    border-bottom: 2px solid $primary-color;
+  }
+}
+
+// Main keygen
+.keygen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__result {
+    text-align: center;
+    width: 100%;
+    margin: 25px 0;
+
+    input {
+      font-size: 18pt;
+      font-weight: 300;
+      width: 85%;
+      border: none;
+      padding: 1em;
+      text-align: center;
+
+      &::selection {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+    #generate-key-btn {
+      @include custom-button(#04bf1b, white, 16pt);
+    }
+
+    #copy-key-btn {
+      @include custom-button($primary-color, white, 16pt);
+    }
+
+    #clear-key-btn {
+      @include custom-button(tomato, white, 16pt);
+    }
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  position: absolute;
+  font-size: 16pt;
+  background-color: $primary-color;
+  color: white;
+
+  &__left {
+    p {
+      font-weight: 400;
+    }
+  }
+
+  &__right {
+    font-size: 22pt;
+
+    a {
+      color: inherit;
+      i {
+        margin-right: 0.4em;
+        cursor: pointer;
+        @include hover-animation(1.2);
+      }
+    }
+  }
+}
