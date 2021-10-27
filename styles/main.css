@@ -142,6 +142,7 @@ header h1 {
 }
 .footer__right a {
   color: inherit;
+  text-decoration: none;
 }
 .footer__right a i {
   margin-right: 0.4em;
