@@ -162,8 +162,15 @@ header {
 	color: white;
 
 	&__left {
-		p {
+		&--copy {
 			font-weight: 400;
+			display: flex;
+			align-items: center;
+
+			img {
+				margin: 0 8px 0 0;
+				height: 30px;
+			}
 		}
 	}
 
