@@ -162,8 +162,15 @@ header {
 	color: white;
 
 	&__left {
-		p {
+		&--copy {
 			font-weight: 400;
+			display: flex;
+			align-items: center;
+
+			img {
+				margin: 0 8px 0 0;
+				height: 30px;
+			}
 		}
 	}
 
@@ -172,10 +179,94 @@ header {
 
 		a {
 			color: inherit;
+			text-decoration: none;
+
 			i {
 				margin-right: 0.4em;
 				cursor: pointer;
 				@include hover-animation(1.2);
+			}
+		}
+	}
+}
+
+// MEDIA QUERIES
+@media (max-width: 1175px) {
+	.keygen {
+		&__buttons {
+			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 720px) {
+	header {
+		display: block;
+		height: auto;
+		padding: 1.5em 0 1em 0;
+
+		h1 {
+			font-size: 22pt;
+		}
+	}
+
+	.keygen {
+		&__input {
+			width: 90%;
+
+			.input__group {
+				label {
+					font-size: 10pt;
+					color: rgba($primary-color, 0.8);
+				}
+
+				input {
+					font-size: 14pt;
+					width: inherit;
+				}
+			}
+		}
+
+		&__result {
+			margin: 0.5em 0;
+
+			#generated-key {
+				width: 90%;
+				padding: 0.7em 0;
+				font-size: 16pt;
+			}
+		}
+
+		&__buttons {
+			flex-direction: column;
+			width: 90%;
+			gap: 10px;
+
+			button {
+				border-radius: 4px;
+			}
+
+			& > div {
+				button {
+					height: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.footer {
+		height: auto;
+		padding: 1em 0;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		gap: 10px;
+		border-top-left-radius: 30px;
+		border-top-right-radius: 30px;
+
+		&__left {
+			&--copy {
+				font-size: 12pt;
 			}
 		}
 	}
