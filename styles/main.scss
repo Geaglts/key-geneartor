@@ -77,6 +77,25 @@ header {
 	@extend .flex;
 	flex-direction: column;
 
+	&__input {
+		&--title {
+			$color: rgba(#222, 0.7);
+			border: none;
+			font-size: 12pt;
+			font-weight: 400;
+			height: 30px;
+			text-transform: capitalize;
+
+			&::placeholder {
+				color: $color;
+			}
+
+			&:focus {
+				border-bottom: 1px solid $color;
+			}
+		}
+	}
+
 	&__result {
 		text-align: center;
 		width: 100%;

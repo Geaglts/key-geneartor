@@ -56,6 +56,19 @@ header h1 {
 .keygen {
   flex-direction: column;
 }
+.keygen__input--title {
+  border: none;
+  font-size: 12pt;
+  font-weight: 400;
+  height: 30px;
+  text-transform: capitalize;
+}
+.keygen__input--title::placeholder {
+  color: rgba(34, 34, 34, 0.7);
+}
+.keygen__input--title:focus {
+  border-bottom: 1px solid rgba(34, 34, 34, 0.7);
+}
 .keygen__result {
   text-align: center;
   width: 100%;

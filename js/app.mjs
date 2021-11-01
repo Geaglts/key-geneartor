@@ -1,9 +1,11 @@
 import KeyGenerator from "./classes/KeyGenerator.mjs";
+import { copyText } from "./utils/copyText.mjs";
 
 const genKeyBtn = document.getElementById("generate-key-btn");
 const copyKeyBtn = document.getElementById("copy-key-btn");
 const clearKeyBtn = document.getElementById("clear-key-btn");
 
+const KeyTitleInput = document.getElementById("key-title");
 const generatedKeyInput = document.getElementById("generated-key");
 const keySizeInput = document.getElementById("key-size");
 
@@ -32,8 +34,7 @@ const showCopiedView = () => {
 
 // copia la llave generada en el portapapeles
 copyKeyBtn.onclick = () => {
-	generatedKeyInput.select();
-	document.execCommand("copy");
+	copyText(KeyTitleInput.value, keyGenerator.key);
 	showCopiedView();
 };
 
