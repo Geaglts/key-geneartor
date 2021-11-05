@@ -41,6 +41,7 @@ copyKeyBtn.onclick = () => {
 // limpia la llave generada
 clearKeyBtn.onclick = () => {
 	keyGenerator.key = "";
+	KeyTitleInput.value = "";
 	generatedKeyInput.value = "";
 	keySizeInput.value = "";
 };
