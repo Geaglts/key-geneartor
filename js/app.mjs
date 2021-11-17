@@ -1,13 +1,14 @@
 import KeyGenerator from "./classes/KeyGenerator.mjs";
 import { copyText } from "./utils/copyText.mjs";
+import $ from "./utils/selector.mjs";
 
-const genKeyBtn = document.getElementById("generate-key-btn");
-const copyKeyBtn = document.getElementById("copy-key-btn");
-const clearKeyBtn = document.getElementById("clear-key-btn");
+const genKeyBtn = $("#generate-key-btn");
+const copyKeyBtn = $("#copy-key-btn");
+const clearKeyBtn = $("#clear-key-btn");
 
-const KeyTitleInput = document.getElementById("key-title");
-const generatedKeyInput = document.getElementById("generated-key");
-const keySizeInput = document.getElementById("key-size");
+const KeyTitleInput = $("#key-title");
+const generatedKeyInput = $("#generated-key");
+const keySizeInput = $("#key-size");
 
 const keyGenerator = new KeyGenerator();
 
@@ -25,7 +26,7 @@ genKeyBtn.onclick = () => {
 
 // muestra la vista de "copiado"
 const showCopiedView = () => {
-	const copiedView = document.getElementById("copied-container");
+	const copiedView = $("#copied-container");
 	copiedView.style.display = "flex";
 	setTimeout(() => {
 		copiedView.style.display = "none";
