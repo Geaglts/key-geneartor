@@ -210,6 +210,15 @@ header {
 }
 
 // MEDIA QUERIES
+@media (max-height: 655px) {
+	.footer {
+		display: none;
+	}
+	.keygen {
+		padding-bottom: 24px;
+	}
+}
+
 @media (max-width: 1175px) {
 	.keygen {
 		&__buttons {
@@ -287,6 +296,31 @@ header {
 			&--copy {
 				font-size: 12pt;
 			}
+		}
+	}
+}
+
+@media (min-width: 720px) and (max-height: 655px) {
+	.header {
+		height: auto;
+		padding: 24px;
+		&__title {
+			font-size: 22pt;
+		}
+	}
+
+	.keygen {
+		display: grid;
+
+		&__result {
+			margin: 8px 0;
+		}
+
+		&__buttons {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 12px;
 		}
 	}
 }
